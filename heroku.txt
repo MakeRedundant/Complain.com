@@ -1,0 +1,16 @@
+Heroku is a massive pain 
+
+heroku login
+heroku config: to see config vars are working
+heroku apps: for applications
+heroku run node server/config/seeds.js: to see the data properly
+(remember this is based on relative path to seeds )
+
+
+
+
+heroku create custon name: to make a new app 
+heroku apps:destroy --app custom add
+
+git remote -v : check what the git repo is connected with
+

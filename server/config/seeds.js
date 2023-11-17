@@ -7,12 +7,13 @@ db.once("open", async () => {
   await cleanDB("User", "users");
 //seed data
   const complaints = await Complaints.insertMany([
-    {
+     // 0
+  {
       title: "Brave Karen fights minimum wage workers",
       description:
         "Ordered 6 nuggies, only got 5!!  Should i sue maccas? Is this a hate crime?",
       category: "Food",
-      username: "jblan",
+      username: "karen007",
       image: "",
       date: "06/06/23",
       votes: 12,
@@ -31,6 +32,7 @@ db.once("open", async () => {
         },
       ],
     },
+     // 1
     {
       title: "Co-worker attempted murder by starvation!",
       description: "My mate stole my lunch, should i eat him?",
@@ -54,6 +56,7 @@ db.once("open", async () => {
         },
       ],
     },
+     // 2
     {
       title: "Why are workers so lazy?",
       description: "I want my workers to work 18 hours a day but they refused?",
@@ -77,6 +80,7 @@ db.once("open", async () => {
         },
       ],
     },
+     // 3
     {
       title: "My 9 year old daughter refuses to pay rent",
       description:
@@ -107,6 +111,7 @@ db.once("open", async () => {
         },
       ],
     },
+     // 4
     {
       title: "Apple releases Iphone 999 WITHOUT CHARGING PORT",
       description: "CEO says SUCKS FOR YOU GUYS",
@@ -124,6 +129,7 @@ db.once("open", async () => {
         },
       ],
     },
+     // 5
     {
       title: "Is my doctor fat shaming my cat?",
       description:
@@ -142,12 +148,13 @@ db.once("open", async () => {
         },
       ],
     },
+     // 6
     {
       title: "Is it rude to eat my neighbour's baby?",
       description: "My neighbour was slightly annoyed, Thoughts?",
       image: "",
       category: "Random",
-      username: "kalid",
+      username: "brian",
       date: "05/05/23",
       votes: 4,
       comments: [
@@ -159,6 +166,7 @@ db.once("open", async () => {
         },
       ],
     },
+     // 7
     {
       title: "WORLD'S YOUNGEST BABY JUST BORN",
       description:
@@ -189,6 +197,7 @@ db.once("open", async () => {
         },
       ],
     },
+     // 8
     {
       title: "Infant Unemployment rate hits record low",
       description: "CEOs rejoice as more babies return to the workplace",
@@ -227,7 +236,16 @@ db.once("open", async () => {
 
     password: "abcd1234",
     isModerator: true,
-    complaints: [complaints[0]._id],
+    complaints: [],
+  });
+
+  await User.create({
+    username: "admin",
+    email: "admin@gmail.com",
+
+    password: "abcd1234",
+    isModerator: true,
+    complaints: [],
   });
 
   await User.create({
@@ -236,7 +254,16 @@ db.once("open", async () => {
 
     password: "abcd1234",
     isModerator: false,
-    complaints: [complaints[1]._id, complaints[6]._id, complaints[7]._id],
+    complaints: [complaints[1]._id, complaints[6]._id],
+  });
+
+  await User.create({
+    username: "brian",
+    email: "brian@gmail.com",
+
+    password: "abcd1234",
+    isModerator: false,
+    complaints: [complaints[7]._id],
   });
 
   await User.create({
@@ -245,7 +272,7 @@ db.once("open", async () => {
 
     password: "abcd1234",
     isModerator: false,
-    complaints: [complaints[3]._id, complaints[4]._id, complaints[5]._id],
+    complaints: [complaints[0]._id, complaints[3]._id, complaints[4]._id, complaints[5]._id],
   });
 
   await User.create({
