@@ -168,12 +168,12 @@ db.once("open", async () => {
     },
      // 7
     {
-      title: "WORLD'S YOUNGEST BABY JUST BORN",
+      title: "WORLD'S YOUNGEST NUDIST BABY JUST BORN",
       description:
         "My baby was born without clothes, did the doctor steal them?",
       image: "",
       category: "Life",
-      username: "kalid",
+      username: "brian",
       date: "01/01/19",
       votes: 2,
       comments: [
@@ -254,7 +254,7 @@ db.once("open", async () => {
 
     password: "abcd1234",
     isModerator: false,
-    complaints: [complaints[1]._id, complaints[6]._id],
+    complaints: [complaints[1]._id],
   });
 
   await User.create({
@@ -263,7 +263,7 @@ db.once("open", async () => {
 
     password: "abcd1234",
     isModerator: false,
-    complaints: [complaints[7]._id],
+    complaints: [complaints[6]._id, complaints[7]._id],
   });
 
   await User.create({
