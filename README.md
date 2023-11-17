@@ -1,6 +1,5 @@
 # Complain
-https://your-complaint-b9ee4991068a.herokuapp.com/
-https://complain-com-6e0ef01a712c.herokuapp.com/
+https://complain-com-a977d53e691f.herokuapp.com
 
 ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
 ![JavaScript Badge](https://img.shields.io/badge/JavaScript-yellow.svg)
@@ -132,7 +131,7 @@ Join Complain.com today and make your voice heard.
 
 You can use our deployed link
 
-https://your-complaint-b9ee4991068a.herokuapp.com/
+https://complain-com-a977d53e691f.herokuapp.com
 
 or you can do a ```git clone```
 
