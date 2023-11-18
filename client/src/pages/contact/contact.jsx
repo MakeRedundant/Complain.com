@@ -130,7 +130,7 @@ export default function Contact() {
             <i className="fas fa-phone"></i> Phone
           </a>
           <a
-            href="https://makeredundant.github.io/Brian-Website/"
+            href="https://brian-trang-portfolio.netlify.app"
             className="contact-button"
             target="_blank"
             rel="noreferrer"
