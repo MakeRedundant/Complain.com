@@ -55,17 +55,17 @@ function DisplayAllComments({ complaintID, comment, currentUser }) {
     }
   };
   return (
+  <Grid container justifyContent="center" alignItems="center"> 
     <Grid item xs={12} md={6}>
       <Card sx={{ display: "flex" }}>
         <CardContent sx={{ flex: 1 }}>
           <Typography component="h2" variant="h5">
-            {comment.author}
-            
-          </Typography>
-          <Typography variant="subtitle1" color="text.secondary">
             {comment.description}
           </Typography>
           <Typography variant="subtitle1" paragraph>
+            {comment.author}
+          </Typography>
+          <Typography variant="subtitle1" color="text.secondary">
             {comment.createdAt}
           </Typography>
         </CardContent>
@@ -103,6 +103,7 @@ function DisplayAllComments({ complaintID, comment, currentUser }) {
       ) : (
         <div></div>
       )}
+    </Grid>
     </Grid>
   );
 }
