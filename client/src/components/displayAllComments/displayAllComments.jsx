@@ -55,55 +55,55 @@ function DisplayAllComments({ complaintID, comment, currentUser }) {
     }
   };
   return (
-  <Grid container justifyContent="center" alignItems="center"> 
-    <Grid item xs={12} md={6}>
-      <Card sx={{ display: "flex" }}>
-        <CardContent sx={{ flex: 1 }}>
-          <Typography component="h2" variant="h5">
-            {comment.description}
-          </Typography>
-          <Typography variant="subtitle1" paragraph>
-            {comment.author}
-          </Typography>
-          <Typography variant="subtitle1" color="text.secondary">
-            {comment.createdAt}
-          </Typography>
-        </CardContent>
-        <CardMedia
-          component="img"
-          sx={{ width: 160, display: { xs: "none", sm: "block" } }}
-          image="https://i5.walmartimages.com/asr/9b971d54-7995-4a47-aa7a-adb2d7630c6c.f21033ccb62a1d89e93c2402428e6085.jpeg"
-          alt="text"
-        />
-      </Card>
-{/* check if logged in user is the same as the author of the comment. Edit comment can only be displayed if comment belongs to user */}
-{/* delete button is also only displayed if comment belongs to logged in user  */}
-{/* on click open form to edit comment passing the complaintID and comment as props */}
-      {currentUser === comment.author ? (
-        <div>
-          <Button onClick={handleOpen}>Edit</Button>
-          <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="parent-modal-title"
-            aria-describedby="parent-modal-description"
-          >
-            <Box sx={{ ...style, width: 400 }}>
-              <EditCommentForm
-                complaintID={complaintID}
-                comment={comment}
-                handleClose={handleClose}
-              />
-            </Box>
-          </Modal>
+    <Grid container justifyContent="center" alignItems="center">
+      <Grid item xs={12} md={6} sx={{ paddingTop: 3}}>
+        <Card sx={{ display: "flex", width: "100%", maxWidth: 600, borderRadius: 8}}>
+          <CardContent sx={{ flex: 1}}>
+            <Typography component="h2" variant="h5">
+              {comment.description}
+            </Typography>
+            <Typography variant="subtitle1" paragraph>
+              {comment.author}
+            </Typography>
+            <Typography variant="subtitle1" color="text.secondary">
+              {comment.createdAt}
+            </Typography>
+          </CardContent>
+          <CardMedia
+            component="img"
+            sx={{ width: 160, display: { xs: "none", sm: "block" } }}
+            image="https://i5.walmartimages.com/asr/9b971d54-7995-4a47-aa7a-adb2d7630c6c.f21033ccb62a1d89e93c2402428e6085.jpeg"
+            alt="text"
+          />
+        </Card>
+        {/* check if logged in user is the same as the author of the comment. Edit comment can only be displayed if comment belongs to user */}
+        {/* delete button is also only displayed if comment belongs to logged in user  */}
+        {/* on click open form to edit comment passing the complaintID and comment as props */}
+        {currentUser === comment.author ? (
           <div>
-            <Button onClick={handleDeleteComment}>Delete</Button>
+            <Button onClick={handleOpen}>Edit</Button>
+            <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="parent-modal-title"
+              aria-describedby="parent-modal-description"
+            >
+              <Box sx={{ ...style, width: 400 }}>
+                <EditCommentForm
+                  complaintID={complaintID}
+                  comment={comment}
+                  handleClose={handleClose}
+                />
+              </Box>
+            </Modal>
+            <div>
+              <Button onClick={handleDeleteComment}>Delete</Button>
+            </div>
           </div>
-        </div>
-      ) : (
-        <div></div>
-      )}
-    </Grid>
+        ) : (
+          <div></div>
+        )}
+      </Grid>
     </Grid>
   );
 }
