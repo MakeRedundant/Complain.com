@@ -1,0 +1,7 @@
+/* Mobile optimization */
+@media screen and (max-width: 768px) {
+    #profile {
+      margin-top: 50% !important;
+      flex-direction: column;
+    }
+  }

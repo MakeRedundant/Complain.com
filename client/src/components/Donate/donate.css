@@ -48,3 +48,12 @@ h1 {
   font-size: 1.5rem;
   color: #333;
 }
+
+
+/* Mobile optimization */
+@media screen and (max-width: 768px) {
+  #donate {
+    margin-top: 50% !important;
+    flex-direction: column;
+  }
+}

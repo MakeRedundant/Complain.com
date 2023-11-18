@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import "./terms.css";
+
 const Terms = () => {
   // define state
   const [consent, setConsent] = useState(false);
