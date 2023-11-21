@@ -9,7 +9,7 @@ import Grid from "@mui/material/Grid";
 import AdminConditionalButton from "../adminConditionalButton/adminConditionalButton";
 
 export default function LatestComplaintCard({ complaint, isAdmin }) {
-  //default image 
+  //default image
   const defaultImageLink = "https://source.unsplash.com/random?wallpapers";
   return (
     <Grid sx={{ paddingTop: 5}}>

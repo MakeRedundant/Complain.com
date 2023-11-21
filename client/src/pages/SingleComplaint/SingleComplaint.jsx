@@ -151,7 +151,7 @@ function SingleComplaint() {
           {/* display complaint info */}
           <CardContent sx={{ flex: 1 }}>
             <Typography component="h2" variant="h5">
-              {singleComplaint.category}
+              {singleComplaint.title}
             </Typography>
             <Typography variant="subtitle1" color="text.secondary">
               {userComplaint.username}
@@ -159,17 +159,17 @@ function SingleComplaint() {
             <Typography variant="subtitle1" color="text.secondary">
               {singleComplaint.date}
             </Typography>{" "}
-            <Typography variant="subtitle1" paragraph>
-              {singleComplaint.title}
+            <Typography variant="subtitle1" color="text.secondary">
+             Category: {singleComplaint.category}
             </Typography>
             <Typography variant="subtitle1" paragraph>
               {singleComplaint.description}
             </Typography>
             <Typography variant="subtitle1" paragraph>
-              {singleComplaint.votes} votes of support
+              {singleComplaint.votes} Votes of support 👍
             </Typography>
             <Typography variant="subtitle1" paragraph>
-              {singleComplaint.unsupportedVotes} votes not in support
+              {singleComplaint.unsupportedVotes} Votes not in support 👎
             </Typography>
             <Typography variant="subtitle1" paragraph>
               {singleComplaint.createdAt}
