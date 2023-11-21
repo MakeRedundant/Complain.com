@@ -31,7 +31,7 @@ function Sidebar(props) {
         </Link>
       ))}
 
-      <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
+      {/* <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
         Social
       </Typography>
       {social.map((network) => (
@@ -47,7 +47,7 @@ function Sidebar(props) {
             <span>{network.name}</span>
           </Stack>
         </Link>
-      ))}
+      ))} */}
     </Grid>
   );
 }
