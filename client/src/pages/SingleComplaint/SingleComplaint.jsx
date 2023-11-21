@@ -219,13 +219,13 @@ function SingleComplaint() {
                 className="btn btn-sm btn-danger ml-auto"
                 onClick={() => handleVote()}
               >
-                How did you manage?
+                Up vote !👍
               </button>
               <button
                 className="btn btn-sm btn-danger ml-auto"
                 onClick={() => handleVoteUnsupport()}
               >
-                Stop Complaining!
+                Down vote!👎
               </button>
             </div>
           ) : (

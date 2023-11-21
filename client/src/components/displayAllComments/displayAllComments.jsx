@@ -57,7 +57,7 @@ function DisplayAllComments({ complaintID, comment, currentUser }) {
   return (
     <Grid container justifyContent="center" alignItems="center">
       <Grid item xs={12} md={6} sx={{ paddingTop: 3}}>
-        <Card sx={{ display: "flex", width: "100%", maxWidth: 600, borderRadius: 8}}>
+        <Card sx={{ display: "flex", width: "100%", maxWidth: 600, borderRadius: 8, boxShadow: 9}}>
           <CardContent sx={{ flex: 1}}>
             <Typography component="h2" variant="h5">
               {comment.description}
