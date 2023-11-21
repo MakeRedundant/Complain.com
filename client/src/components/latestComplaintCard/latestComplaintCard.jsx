@@ -12,7 +12,7 @@ export default function LatestComplaintCard({ complaint, isAdmin }) {
   //default image 
   const defaultImageLink = "https://source.unsplash.com/random?wallpapers";
   return (
-    <Grid>
+    <Grid sx={{ paddingTop: 5}}>
       {/* card action area used to make box selectable */}
       <CardActionArea
         component="a"
@@ -20,7 +20,7 @@ export default function LatestComplaintCard({ complaint, isAdmin }) {
         key={complaint._id}
       >
         {/* display complaint details */}
-        <Card sx={{ display: "flex", width: "100%" }}>
+        <Card sx={{ display: "flex", width: "100%", borderRadius: 8, boxShadow: 9}}>
           <CardContent sx={{ flex: 1 }}>
             <Typography component="h2" variant="h5">
               {complaint.title}
