@@ -45,7 +45,7 @@ function Header(props) {
           align="center"
           noWrap
           sx={{ flex: 1 }}
-          className="header-title" // Add this line
+          className="header-title"
         >
           💢 COMPLAIN 😡
         </Typography>
@@ -85,6 +85,7 @@ function Header(props) {
                 backgroundColor: "#3f51b5",
                 color: "#fff",
                 borderRadius: "4px",
+
               },
             }}
           >
