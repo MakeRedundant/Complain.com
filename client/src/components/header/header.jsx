@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 //import CSS for header
 import "./header.css";
@@ -28,8 +27,15 @@ function Header(props) {
 
   return (
     <React.Fragment>
-      <Toolbar className="header" sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Button className="header-subscribe" variant="contained" color="primary">
+      <Toolbar
+        className="header"
+        sx={{ borderBottom: 1, borderColor: "divider" }}
+      >
+        <Button
+          className="header-subscribe"
+          variant="contained"
+          color="primary"
+        >
           Subscribe
         </Button>
         <Typography
@@ -41,7 +47,7 @@ function Header(props) {
           sx={{ flex: 1 }}
           className="header-title" // Add this line
         >
-   💢 COMPLAIN 😡
+          💢 COMPLAIN 😡
         </Typography>
 
         {userIsLoggedIn && ( // Display the "Make a Complaint" button only if the user is logged in
@@ -70,7 +76,17 @@ function Header(props) {
             variant="body2"
             href={section.url}
             className="header-nav-link"
-            sx={{ p: 1, flexShrink: 0 }}
+            sx={{
+              p: 1,
+              flexShrink: 0,
+              textDecoration: "underline",
+              transition: "background-color 0.3s",
+              "&:hover": {
+                backgroundColor: "#3f51b5",
+                color: "#fff",
+                borderRadius: "4px",
+              },
+            }}
           >
             {section.title}
           </Link>

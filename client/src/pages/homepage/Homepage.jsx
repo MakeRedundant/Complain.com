@@ -60,7 +60,6 @@ export default function Homepage() {
   useEffect(() => {
     if (Auth.loggedIn()) {
       const userInfo = Auth.getProfile().data.isModerator;
-      
       setIsAdmin(userInfo);
     } else {
       setIsAdmin(false);
