@@ -6,6 +6,7 @@ import { useQuery } from "@apollo/client";
 import { GET_ME } from "../../utils/queries";
 import Auth from "../../utils/auth";
 import Modal from "@mui/material/Modal";
+import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import * as React from "react";
 import Box from "@mui/material/Box";
@@ -105,40 +106,52 @@ const Profile = () => {
             </Box>
           </Modal>
           {/* map over complaints and display user's complaints. React router link added to Action area to send user to the single complaints page */}
-          <Typography variant="h2"> Your Complaints:</Typography>
-          {complaints.map((complaint) => (
-            <CardActionArea
-              component={Link}
-              to={`/Complaint/${complaint._id}`}
-              key={complaint._id}
-            >
-              <Card sx={{ display: "flex", width: "100%" }}>
-                <CardContent sx={{ flex: 1 }}>
-                  <Typography component="h2" variant="h5">
-                    {complaint.title}
-                  </Typography>
-                  <Typography variant="subtitle1" color="text.secondary">
-                    {complaint.date}
-                  </Typography>
-                  <Typography variant="subtitle1" paragraph>
-                    {complaint.description}
-                  </Typography>
-                  <Typography variant="subtitle1" color="primary">
-                    Continue reading...
-                  </Typography>
-                </CardContent>
-                <CardMedia
-                  component="img"
-                  sx={{
-                    width: 160,
-                    display: { xs: "none", sm: "block" },
-                  }}
-                  image={complaint.image || defaultImageLink}
-                  alt="text"
-                />
-              </Card>
-            </CardActionArea>
-          ))}
+          <Grid container justifyContent="center" alignItems="center">
+            <Grid item xs={12} sx={{ paddingTop: "5rem" }}>
+              <Typography variant="h2"> Your Complaints:</Typography>
+              {complaints.map((complaint) => (
+                <Grid item xs={12} sx={{ paddingTop: "3rem" }} key={complaint._id}>
+                  <CardActionArea
+                    component={Link}
+                    to={`/Complaint/${complaint._id}`}
+                  >
+                    <Card
+                      sx={{
+                        display: "flex",
+                        width: "100%",
+                        borderRadius: 8,
+                        boxShadow: 9,
+                      }}
+                    >
+                      <CardContent sx={{ flex: 1 }}>
+                        <Typography component="h2" variant="h5">
+                          {complaint.title}
+                        </Typography>
+                        <Typography variant="subtitle1" color="text.secondary">
+                          {complaint.date}
+                        </Typography>
+                        <Typography variant="subtitle1" paragraph>
+                          {complaint.description}
+                        </Typography>
+                        <Typography variant="subtitle1" color="primary">
+                          Continue reading...
+                        </Typography>
+                      </CardContent>
+                      <CardMedia
+                        component="img"
+                        sx={{
+                          width: 160,
+                          display: { xs: "none", sm: "block" },
+                        }}
+                        image={complaint.image || defaultImageLink}
+                        alt="text"
+                      />
+                    </Card>
+                  </CardActionArea>
+                </Grid>
+              ))}
+            </Grid>
+          </Grid>
         </div>
       ) : (
         <p>
