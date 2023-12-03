@@ -150,7 +150,7 @@ export default function Contact() {
               <TextField
                 id="form-input-control-last-name"
                 value={name}
-                name="user_name"
+                name="name"
                 onBlur={checkName}
                 onChange={handleInputChange}
                 label="Name"
@@ -171,7 +171,7 @@ export default function Contact() {
               <TextField
                 id="form-input-control-email"
                 value={email}
-                name="user_email"
+                name="email"
                 onBlur={checkName}
                 onChange={handleInputChange}
                 label="Email"
@@ -191,8 +191,8 @@ export default function Contact() {
               />
               <TextareaAutosize
                 id="form-textarea-control-opinion"
-                type="submit"
-                value="Send"
+                inputtype ="submit"
+                value={message}
                 onBlur={checkName}
                 name="message"
                 onChange={handleInputChange}
