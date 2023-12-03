@@ -119,27 +119,33 @@ export default function Contact() {
         </div>
         <div className="contact-details">
           {/* All links open in a new tab */}
-          <a href="tel:+9999999999" className="contact-button">
-            <i className="fas fa-phone"></i> Phone
+          <a href="tel:+9999999999" className="contact-button" style={{ paddingRight: "10px" }}>
+            <i className="fas fa-phone"></i>{" "}
+            Phone
           </a>
           <a
             href="https://brian-trang-portfolio.netlify.app"
             className="contact-button"
+            style={{ paddingRight: "10px" }}
             target="_blank"
             rel="noreferrer"
           >
-            <i className="fas fa-globe"></i> Website
+            <i className="fas fa-globe"></i>{" "}
+            Website
           </a>
-          <a href="mailto:Brian.trang@hotmail.com" className="contact-button">
-            <i className="fas fa-envelope"></i> Email
+          <a href="mailto:Brian.trang@hotmail.com" className="contact-button" style={{ paddingRight: "10px" }}>
+            <i className="fas fa-envelope"></i>{" "}
+            Email
           </a>
           <a
             href="https://github.com/MakeRedundant"
             className="contact-button"
+            style={{ paddingRight: "10px" }}
             target="_blank"
             rel="noreferrer"
           >
-            <i className="fab fa-github"></i> GitHub
+            <i className="fab fa-github"></i>{" "}
+            GitHub
           </a>
         </div>
       </div>

@@ -11,6 +11,19 @@ Form {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
+.contact-button .fa-phone {
+  margin-left: 5px;
+}
+.contact-button .fa-globe {
+  margin-left: 5px;
+}
+.contact-button .fa-envelope {
+  margin-left: 5px;
+}
+.contact-button .fa-github {
+  margin-left: 5px;
+}
+
 .submit-button {
   background-color: rgb(13, 29, 255);
   color: aliceblue;
