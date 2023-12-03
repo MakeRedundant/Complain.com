@@ -28,48 +28,34 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [submission, setSubmission] = useState("");
-  const [userLocation, setLocation] = useState("");
-
-  const checkClick = (e) => {
-    const { target } = e;
-    const inputType = target.name;
-    const inputValue = target.value;
-
-    if (userLocation === "") {
-    }
-  };
 
   //Function to handle when input is changed
   //Checks if input is empty and calls error message if required
   const handleInputChange = (e) => {
-    const { target } = e;
-    const inputType = target.name;
-    const inputValue = target.value;
+    const { name, value } = e.target;
 
-    if (inputType === "email") {
-      if (inputValue === "") {
-        return setErrorMessage("cannot be empty"), setEmail("");
+    if (name === "email") {
+      setEmail(value);
+      if (value === "") {
+        setErrorMessage("Email cannot be empty");
       } else {
-        setEmail(inputValue);
+        setErrorMessage("");
+      }
+    } else if (name === "name") {
+      setName(value);
+      if (value === "") {
+        setErrorMessage("Please include your name");
+      } else {
+        setErrorMessage("");
+      }
+    } else if (name === "message") {
+      setMessage(value);
+      if (value === "") {
+        setErrorMessage("Please include a message, thanks");
+      } else {
+        setErrorMessage("");
       }
     }
-    if (inputType === "name") {
-      if (inputValue === "") {
-        return setErrorMessage("Please include your name"), setName("");
-      } else {
-        setName(inputValue);
-      }
-    }
-    if (inputType === "message") {
-      if (inputValue === "") {
-        return (
-          setErrorMessage("Please include a message, thanks"), setMessage("")
-        );
-      } else {
-        setMessage(inputValue);
-      }
-    }
-    setErrorMessage("");
     setSubmission("");
   };
 
@@ -212,13 +198,15 @@ export default function Contact() {
                 minRows={5}
                 maxRows={10}
               />
-              <Button
-                className="submit-button mt-2"
-                type="submit"
-                variant="contained"
-              >
-                Submit
-              </Button>
+              <form onSubmit={handleFormSubmit}>
+                <Button
+                  className="submit-button mt-2"
+                  type="submit"
+                  variant="contained"
+                >
+                  Submit
+                </Button>
+              </form>
               {/* Error message display */}
               {errorMessage && (
                 <div>
