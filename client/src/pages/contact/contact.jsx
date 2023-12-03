@@ -150,7 +150,7 @@ export default function Contact() {
               <TextField
                 id="form-input-control-last-name"
                 value={name}
-                name="name"
+                name="user_name"
                 onBlur={checkName}
                 onChange={handleInputChange}
                 label="Name"
@@ -171,7 +171,7 @@ export default function Contact() {
               <TextField
                 id="form-input-control-email"
                 value={email}
-                name="email"
+                name="user_email"
                 onBlur={checkName}
                 onChange={handleInputChange}
                 label="Email"
