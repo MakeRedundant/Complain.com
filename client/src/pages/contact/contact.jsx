@@ -148,7 +148,7 @@ export default function Contact() {
           <Grid item xs={12}>
             <div className="contact-bg alignBox">
               <TextField
-                id="form-input-control-last-name"
+                id="name"
                 value={name}
                 name="name"
                 onBlur={checkName}
@@ -169,14 +169,14 @@ export default function Contact() {
                 }}
               />
               <TextField
-                id="form-input-control-email"
+                id="email"
                 value={email}
                 name="email"
                 onBlur={checkName}
                 onChange={handleInputChange}
                 label="Email"
                 type="email"
-                placeholder="Email"
+                placeholder="E-mail"
                 required
                 fullWidth
                 variant="outlined"
@@ -190,8 +190,7 @@ export default function Contact() {
                 }}
               />
               <TextareaAutosize
-                id="form-textarea-control-opinion"
-                inputtype ="submit"
+                id="message"
                 value={message}
                 onBlur={checkName}
                 name="message"
