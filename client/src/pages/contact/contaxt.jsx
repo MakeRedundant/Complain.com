@@ -2,12 +2,7 @@
 import "./contact.css";
 import React, { useState } from "react";
 //import from semantic UI
-// import { Form, Input, TextArea, Button } from "semantic-ui-react";
-import { TextField, TextareaAutosize, Button } from "@mui/material";
-import { InputAdornment } from "@mui/material";
-import { AccountCircle, MailOutline } from "@mui/icons-material";
-import Grid from "@mui/material/Grid";
-
+import { Form, Input, TextArea, Button } from "semantic-ui-react";
 //import emailjs
 import emailjs from "emailjs-com";
 
@@ -34,7 +29,6 @@ export default function Contact() {
     const { target } = e;
     const inputType = target.name;
     const inputValue = target.value;
-
     if (userLocation === "") {
     }
   };
@@ -158,78 +152,57 @@ export default function Contact() {
       </div>
       <div className="App">
         <h3>{submission}</h3>
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <div className="contact-bg alignBox">
-              <TextField
-                value={name}
-                name="name"
-                onBlur={checkName}
-                onChange={handleInputChange}
-                label="Name"
-                type="text"
-                placeholder="Name..."
-                required
-                fullWidth
-                variant="outlined"
-                sx={{ marginBottom: "2rem" }}
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <AccountCircle />
-                    </InputAdornment>
-                  ),
-                }}
-              />
-              <TextField
-                value={email}
-                name="email"
-                onBlur={checkName}
-                onChange={handleInputChange}
-                label="Email"
-                type="email"
-                placeholder="Email"
-                required
-                fullWidth
-                variant="outlined"
-                sx={{ marginBottom: "2rem" }}
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <MailOutline />
-                    </InputAdornment>
-                  ),
-                }}
-              />
-              <TextareaAutosize
-                value={message}
-                onBlur={checkName}
-                name="message"
-                onChange={handleInputChange}
-                placeholder="Message here"
-                required
-                style={{ width: "100%", marginBottom: "2rem" }}
-                minRows={5}
-                maxRows={10}
-              />
-              <Button
-                className="submit-button mt-2"
-                type="submit"
-                variant="contained"
-              >
-                Submit
-              </Button>
-              {/* Error message display */}
-              {errorMessage && (
-                <div>
-                  <p className="error-text p-2 error-display mt-2">
-                    {errorMessage}
-                  </p>
-                </div>
-              )}
-            </div>
-          </Grid>
-        </Grid>
+        <Form className="contact-bg alignBox" onSubmit={handleFormSubmit}>
+          <Form.Field
+            id="form-input-control-last-name"
+            value={name}
+            name="name"
+            control={Input}
+            onBlur={checkName}
+            onChange={handleInputChange}
+            label="Name"
+            type="text"
+            onClick={checkClick}
+            placeholder="Name..."
+            required
+            icon="user circle"
+            iconPosition="left"
+          />
+          <Form.Field
+            id="form-input-control-email"
+            value={email}
+            control={Input}
+            name="email"
+            onBlur={checkName}
+            label="Email"
+            onChange={handleInputChange}
+            type="email"
+            placeholder="Email"
+            required
+            icon="mail"
+            iconPosition="left"
+          />
+          <TextArea
+            id="form-textarea-control-opinion"
+            rows="5"
+            value={message}
+            onBlur={checkName}
+            name="message"
+            label="Message"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="Message here"
+            required
+          />
+          <button className="submit-button mt-2" type="submit">
+            Submit
+          </button>
+        </Form>
+        {errorMessage && (
+          <div>
+            <p className="error-text p-2 error-display mt-2">{errorMessage}</p>
+          </div>
+        )}
       </div>
     </section>
   );
