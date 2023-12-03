@@ -212,7 +212,7 @@ export default function Contact() {
                   onChange={handleInputChange}
                   placeholder="Message here"
                   required
-                  style={{ width: "100%", marginBottom: "2rem" }}
+                  style={{ width: "100%", marginBottom: "2rem", fontSize: "1.5rem" }}
                   minRows={5}
                   maxRows={10}
                 />
