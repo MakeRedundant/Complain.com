@@ -21,6 +21,8 @@ const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
 const USER_ID = import.meta.env.VITE_USER_ID;
 const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
 
+
+
 export default function Contact() {
   //Define states
   const [email, setEmail] = useState("");
@@ -148,68 +150,64 @@ export default function Contact() {
       </div>
       <div className="App">
         <h3>{submission}</h3>
-        <form
-          headers="application/json"
-          name="contact-form"
-          onSubmit={handleFormSubmit}
-        >
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <div className="contact-bg alignBox">
-                <TextField
-                  id="name"
-                  value={name}
-                  name="name"
-                  onBlur={checkName}
-                  onChange={handleInputChange}
-                  label="Name"
-                  type="text"
-                  placeholder="Name..."
-                  required
-                  fullWidth
-                  variant="outlined"
-                  sx={{ marginBottom: "2rem" }}
-                  InputProps={{
-                    startAdornment: (
-                      <InputAdornment position="start">
-                        <AccountCircle />
-                      </InputAdornment>
-                    ),
-                  }}
-                />
-                <TextField
-                  id="email"
-                  value={email}
-                  name="email"
-                  onBlur={checkName}
-                  onChange={handleInputChange}
-                  label="Email"
-                  type="email"
-                  placeholder="E-mail"
-                  required
-                  fullWidth
-                  variant="outlined"
-                  sx={{ marginBottom: "2rem" }}
-                  InputProps={{
-                    startAdornment: (
-                      <InputAdornment position="start">
-                        <MailOutline />
-                      </InputAdornment>
-                    ),
-                  }}
-                />
-                <TextareaAutosize
-                  id="message"
-                  value={message}
-                  onBlur={checkName}
-                  name="message"
-                  onChange={handleInputChange}
-                  placeholder="Message here"
-                  required
-                  style={{ width: "100%", marginBottom: "2rem" }}
-                  minRows={5}
-                  maxRows={10}
-                />
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <div className="contact-bg alignBox">
+              <TextField
+                id="name"
+                value={name}
+                name="name"
+                onBlur={checkName}
+                onChange={handleInputChange}
+                label="Name"
+                type="text"
+                placeholder="Name..."
+                required
+                fullWidth
+                variant="outlined"
+                sx={{ marginBottom: "2rem" }}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <AccountCircle />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+              <TextField
+                id="email"
+                value={email}
+                name="email"
+                onBlur={checkName}
+                onChange={handleInputChange}
+                label="Email"
+                type="email"
+                placeholder="E-mail"
+                required
+                fullWidth
+                variant="outlined"
+                sx={{ marginBottom: "2rem" }}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <MailOutline />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+              <TextareaAutosize
+                id="message"
+                value={message}
+                onBlur={checkName}
+                name="message"
+                onChange={handleInputChange}
+                placeholder="Message here"
+                required
+                style={{ width: "100%", marginBottom: "2rem" }}
+                minRows={5}
+                maxRows={10}
+              />
+              <form onSubmit={handleFormSubmit}>
                 <Button
                   className="submit-button mt-2"
                   type="submit"
@@ -217,18 +215,18 @@ export default function Contact() {
                 >
                   Submit
                 </Button>
-                {/* Error message display */}
-                {errorMessage && (
-                  <div>
-                    <p className="error-text p-2 error-display mt-2">
-                      {errorMessage}
-                    </p>
-                  </div>
-                )}
-              </div>
-            </Grid>
+              </form>
+              {/* Error message display */}
+              {errorMessage && (
+                <div>
+                  <p className="error-text p-2 error-display mt-2">
+                    {errorMessage}
+                  </p>
+                </div>
+              )}
+            </div>
           </Grid>
-        </form>
+        </Grid>
       </div>
     </section>
   );
