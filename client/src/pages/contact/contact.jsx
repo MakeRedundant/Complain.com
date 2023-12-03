@@ -191,7 +191,8 @@ export default function Contact() {
               />
               <TextareaAutosize
                 id="form-textarea-control-opinion"
-                value={message}
+                type="submit"
+                value="Send"
                 onBlur={checkName}
                 name="message"
                 onChange={handleInputChange}
