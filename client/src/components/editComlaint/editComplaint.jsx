@@ -4,12 +4,15 @@ import { useMutation } from "@apollo/client";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { UPDATE_COMPLAINT } from "../../utils/mutations";
+import PropTypes from "prop-types";
+import "./editComplaint.css";
+
+import { TextField, FormControl, InputLabel, Select, MenuItem, Button } from "@mui/material";
 
 export default function EditComplaint({
   complaintId,
   title,
   category,
-
   date,
   description,
   handleClose,
@@ -74,12 +77,9 @@ export default function EditComplaint({
       //If date selected. Date is first formatted and then passed as variable
       const test = selectedDate.toString();
       const myArray = test.split(" ");
-      
       let elementstodelete = 6;
       let k = myArray.filter((x, i) => i + elementstodelete < myArray.length);
-      
       const formattedDate = k.join(" ");
-      
       try {
         const { data } = await updateComplaint({
           variables: {
@@ -100,35 +100,57 @@ export default function EditComplaint({
   return (
     <div className="complaint-form">
       <form onSubmit={handleSubmit}>
-        <label>
-          Category:
-          <select value={complaintCategory} onChange={handleCategoryChange}>
-            <option value="General">General</option>
-            <option value="Food">Food</option>
-            <option value="Work">Work</option>
-            <option value="Finance">Finance</option>
-            <option value="Life">Life</option>
-            <option value="Health">Health</option>
-            <option value="Technology">Technology</option>
-            <option value="Random">Random</option>
-          </select>
-        </label>
+        <FormControl fullWidth>
+          <InputLabel id="category-label">Category</InputLabel>
+          <Select
+            labelId="category-label"
+            id="category"
+            value={complaintCategory}
+            label="Category"
+            onChange={handleCategoryChange}
+            sx={{
+              marginBottom:"15px"
+            }}
+          >
+            <MenuItem value="General">General</MenuItem>
+            <MenuItem value="Food">Food</MenuItem>
+            <MenuItem value="Work">Work</MenuItem>
+            <MenuItem value="Finance">Finance</MenuItem>
+            <MenuItem value="Life">Life</MenuItem>
+            <MenuItem value="Health">Health</MenuItem>
+            <MenuItem value="Technology">Technology</MenuItem>
+            <MenuItem value="Random">Random</MenuItem>
+          </Select>
+        </FormControl>
         {/* Textarea for entering the title and complaint text */}
-        <textarea
+        <TextField
           placeholder="Title"
           value={complaintTitle}
+          label="Title"
           name="title"
           type="text"
           required
           onChange={handleTitleChange}
+          fullWidth
+          variant="outlined"
+          multiline
+          rows={3}
+          sx={{
+            marginBottom:"15px"
+          }}
         />
-        <textarea
+        <TextField
           placeholder="Type your complaint here"
           value={complaintText}
-          name="description"
+          label="Description"
+          name="Description"
           type="text"
           required
           onChange={handleTextChange}
+          fullWidth
+          variant="outlined"
+          multiline
+          rows={5}
         />
         {/* date */}
         <div className="App">
@@ -148,3 +170,11 @@ export default function EditComplaint({
     </div>
   );
 }
+
+EditComplaint.propTypes = {
+  complaintId: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  handleClose: PropTypes.func,
+};

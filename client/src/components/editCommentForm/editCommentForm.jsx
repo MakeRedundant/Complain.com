@@ -52,7 +52,6 @@ export default function EditCommentForm({ complaintID, comment, handleClose }) {
           variant="outlined"
           multiline
           rows={5}
-          maxRows={Infinity}
         />
 
         {/* Submission button */}

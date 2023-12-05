@@ -189,7 +189,7 @@ function SingleComplaint() {
               type="submit"
               variant="contained"
               sx={{
-                margin:"9px",
+                margin: "9px",
                 "&:hover": {
                   backgroundColor: "green",
                 },
@@ -221,7 +221,7 @@ function SingleComplaint() {
                 type="submit"
                 variant="contained"
                 sx={{
-                  margin:"9px",
+                  margin: "9px",
                   "&:hover": {
                     backgroundColor: "red",
                   },
@@ -239,18 +239,28 @@ function SingleComplaint() {
           {/* if user is logged in and not the same as the username of complaint, vote buttons are displayed. This is to ensure a user cannot vote for their own complaint */}
           {Auth.loggedIn() && currentUser != userComplaint.username ? (
             <div>
-              <button
+              <Button
+                sx={{
+                  "&:hover": {
+                    backgroundColor: "lightgreen",
+                  },
+                }}
                 className="btn btn-sm btn-danger ml-auto"
                 onClick={() => handleVote()}
               >
                 Up vote !👍
-              </button>
-              <button
+              </Button>
+              <Button
+                sx={{
+                  "&:hover": {
+                    backgroundColor: "red",
+                  },
+                }}
                 className="btn btn-sm btn-danger ml-auto"
                 onClick={() => handleVoteUnsupport()}
               >
                 Down vote!👎
-              </button>
+              </Button>
             </div>
           ) : (
             <div></div>
@@ -275,7 +285,7 @@ function SingleComplaint() {
               type="submit"
               variant="contained"
               sx={{
-                margin:"9px",
+                margin: "9px",
                 "&:hover": {
                   backgroundColor: "black",
                 },

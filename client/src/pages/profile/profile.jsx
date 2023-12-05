@@ -74,7 +74,16 @@ const Profile = () => {
           <Typography variant="body1">
             Your User ID: <strong>{userData._id}</strong>
           </Typography>
-          <Button onClick={handleOpen}>Update Profile</Button>
+          <Button
+            sx={{
+              "&:hover": {
+                backgroundColor: "lightgreen",
+              },
+            }}
+            onClick={handleOpen}
+          >
+            Update Profile
+          </Button>
           <Modal
             open={open}
             onClose={handleClose}
@@ -92,7 +101,16 @@ const Profile = () => {
               />
             </Box>
           </Modal>
-          <Button onClick={handledeleteOpen}>DELETE Profile</Button>
+          <Button
+            sx={{
+              "&:hover": {
+                backgroundColor: "red",
+              },
+            }}
+            onClick={handledeleteOpen}
+          >
+            DELETE Profile
+          </Button>
           <Modal
             open={deleteModalOpen}
             onClose={handledeleteClose}
@@ -110,7 +128,12 @@ const Profile = () => {
             <Grid item xs={12} sx={{ paddingTop: "5rem" }}>
               <Typography variant="h2"> Your Complaints:</Typography>
               {complaints.map((complaint) => (
-                <Grid item xs={12} sx={{ paddingTop: "3rem" }} key={complaint._id}>
+                <Grid
+                  item
+                  xs={12}
+                  sx={{ paddingTop: "3rem" }}
+                  key={complaint._id}
+                >
                   <CardActionArea
                     component={Link}
                     to={`/Complaint/${complaint._id}`}
