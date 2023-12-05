@@ -160,7 +160,7 @@ function SingleComplaint() {
               {singleComplaint.date}
             </Typography>{" "}
             <Typography variant="subtitle1" color="text.secondary">
-             Category: {singleComplaint.category}
+              Category: {singleComplaint.category}
             </Typography>
             <Typography variant="subtitle1" paragraph>
               {singleComplaint.description}
@@ -185,7 +185,19 @@ function SingleComplaint() {
         {/* if current user is the same as the user of the complpaint, edit button for complpaint is displayed */}
         {currentUser === userComplaint.username ? (
           <div>
-            <Button onClick={handleOpen}>Edit</Button>
+            <Button
+              type="submit"
+              variant="contained"
+              sx={{
+                margin:"9px",
+                "&:hover": {
+                  backgroundColor: "green",
+                },
+              }}
+              onClick={handleOpen}
+            >
+              Edit Post
+            </Button>
             <Modal
               open={open}
               onClose={handleClose}
@@ -205,7 +217,19 @@ function SingleComplaint() {
               </Box>
             </Modal>
             <div>
-              <Button onClick={handleDeleteComplaint}>Delete</Button>
+              <Button
+                type="submit"
+                variant="contained"
+                sx={{
+                  margin:"9px",
+                  "&:hover": {
+                    backgroundColor: "red",
+                  },
+                }}
+                onClick={handleDeleteComplaint}
+              >
+                Delete Post
+              </Button>
             </div>
           </div>
         ) : (
@@ -247,9 +271,20 @@ function SingleComplaint() {
         <>
           {/* if user is logged in, and add comment button is displayed */}
           {Auth.loggedIn() ? (
-            <button onClick={openModal} className="make-complaint-button">
+            <Button
+              type="submit"
+              variant="contained"
+              sx={{
+                margin:"9px",
+                "&:hover": {
+                  backgroundColor: "black",
+                },
+              }}
+              onClick={openModal}
+              className="make-complaint-button"
+            >
               Add a comment
-            </button>
+            </Button>
           ) : (
             <></>
           )}
