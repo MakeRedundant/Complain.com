@@ -9,7 +9,7 @@ function Sidebar(props) {
   const { archives, description, title } = props;
 
   return (
-    <Grid item xs={12} md={6} sx={{ margin: "auto", padding: 2 }}>
+    <Grid item xs={12} md={6} sx={{ margin: "auto" }}>
       <Paper elevation={0} sx={{ p: 2, bgcolor: "grey.200" }}>
         <Typography variant="h5" gutterBottom>
           {title}

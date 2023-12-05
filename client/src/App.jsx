@@ -34,7 +34,6 @@ const App = () => {
   return (
     <ApolloProvider client={client}>
       <Navbar />
-
       <Outlet />
       <Footer />
     </ApolloProvider>
