@@ -5,6 +5,9 @@ import { validateEmail, checkPassword } from "../../utils/helpers";
 //Mutation to update user
 import { UPDATE_USER } from "../../utils/mutations";
 
+import { TextField, Button, InputAdornment } from "@mui/material";
+import { AccountCircle, MailOutline, Lock } from "@mui/icons-material";
+
 export default function EditUserDetails({ username, email }) {
   //State to set existing values in form
   const [userEmail, setUserEmail] = useState(email);
@@ -82,31 +85,61 @@ export default function EditUserDetails({ username, email }) {
       <h2>{userName}, update your profile? </h2>
       <form onSubmit={handleSubmit}>
         {/* Textarea for entering the complaint text */}
-        <textarea
-          placeholder="Username"
+        <TextField
           value={userName}
           onChange={handleTextChange}
+          label="Username"
           type="text"
-          label="text"
+          placeholder="Username"
           name="username"
           required
+          fullWidth
+          variant="outlined"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <AccountCircle />
+              </InputAdornment>
+            ),
+          }}
+          sx={{ marginBottom: "2rem" }}
         />
-        <textarea
-          placeholder="Email"
+        <TextField
           value={userEmail}
           onChange={handleEmailChange}
+          label="Email"
           type="email"
+          placeholder="E-mail"
           name="email"
-          label="email"
           required
+          fullWidth
+          variant="outlined"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <MailOutline />
+              </InputAdornment>
+            ),
+          }}
+          sx={{ marginBottom: "2rem" }}
         />
-        <textarea
-          placeholder="update password?"
+        <TextField
           value={userPassword}
           onChange={handlePasswordChange}
+          label="Update Password"
           type="password"
+          placeholder="Update Password"
           name="password"
-          label="password"
+          fullWidth
+          variant="outlined"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <Lock />
+              </InputAdornment>
+            ),
+          }}
+          sx={{ marginBottom: "2rem" }}
         />
 
         {/* Submission button */}
