@@ -11,6 +11,10 @@ const db = require("./config/connection");
 const PORT = process.env.PORT || 3001;
 // Create intance of the Express application, app variable is used to define routes, middleware & other app settings
 const app = express();
+
+const compression = require('compression');
+app.use(compression());
+
 const server = new ApolloServer({
   typeDefs,
   resolvers,
