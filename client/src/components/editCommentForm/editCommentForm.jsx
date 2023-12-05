@@ -4,10 +4,8 @@ import { useMutation } from "@apollo/client";
 import { UPDATE_COMMENT } from "../../utils/mutations";
 
 import Auth from "../../utils/auth";
-
-import { TextField, Button, InputAdornment } from "@mui/material";
-import { AccountCircle, MailOutline, Lock } from "@mui/icons-material";
-
+import PropTypes from "prop-types";
+import { TextField, Button } from "@mui/material";
 
 //Edit form. ComplaintID and comment passed down as props
 export default function EditCommentForm({ complaintID, comment, handleClose }) {
@@ -52,6 +50,9 @@ export default function EditCommentForm({ complaintID, comment, handleClose }) {
           name="comment"
           fullWidth
           variant="outlined"
+          multiline
+          rows={5}
+          maxRows={Infinity}
         />
 
         {/* Submission button */}
@@ -70,3 +71,10 @@ export default function EditCommentForm({ complaintID, comment, handleClose }) {
     </div>
   );
 }
+
+
+EditCommentForm.propTypes = {
+  complaintID: PropTypes.string.isRequired,
+  comment: PropTypes.object.isRequired,
+  handleClose: PropTypes.func.isRequired,
+};

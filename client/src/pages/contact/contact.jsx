@@ -220,6 +220,11 @@ export default function Contact() {
                   className="submit-button mt-2"
                   type="submit"
                   variant="contained"
+                  sx={{
+                    "&:hover": {
+                      backgroundColor: "black",
+                    },
+                  }}
                 >
                   Submit
                 </Button>
