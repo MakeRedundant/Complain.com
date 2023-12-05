@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /private/
+Disallow: /admin/
+
+The robots.txt file is a text file placed in the root directory of a website to provide instructions to web robots
+or crawlers about which pages or files they can or cannot access. 

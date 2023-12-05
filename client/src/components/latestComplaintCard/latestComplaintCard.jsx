@@ -48,6 +48,7 @@ export default function LatestComplaintCard({ complaint, isAdmin }) {
             }}
             image={complaint.image || defaultImageLink}
             alt="text"
+            loading="lazy"
           />
         </Card>
       </CardActionArea>
