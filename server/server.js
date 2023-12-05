@@ -12,6 +12,10 @@ const PORT = process.env.PORT || 3001;
 // Create intance of the Express application, app variable is used to define routes, middleware & other app settings
 const app = express();
 
+app.get("/robots.txt", function(req, res){
+  res.sendFile(path.resolve("robots.txt"));
+});
+
 const compression = require('compression');
 app.use(compression());
 
