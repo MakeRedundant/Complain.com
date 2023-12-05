@@ -5,6 +5,10 @@ import { UPDATE_COMMENT } from "../../utils/mutations";
 
 import Auth from "../../utils/auth";
 
+import { TextField, Button, InputAdornment } from "@mui/material";
+import { AccountCircle, MailOutline, Lock } from "@mui/icons-material";
+
+
 //Edit form. ComplaintID and comment passed down as props
 export default function EditCommentForm({ complaintID, comment, handleClose }) {
   const userName = Auth.getProfile().data.username;
@@ -39,14 +43,29 @@ export default function EditCommentForm({ complaintID, comment, handleClose }) {
       <h2>Update your comment {userName}</h2>
       <form onSubmit={handleSubmit}>
         {/* Textarea for entering the complaint text */}
-        <textarea
+        <TextField
           placeholder="Type your comment here"
           value={descriptionText}
           onChange={handleTextChange}
+          label="comment"
+          type="text"
+          name="comment"
+          fullWidth
+          variant="outlined"
         />
 
         {/* Submission button */}
-        <button type="submit">Submit update</button>
+        <Button
+          type="submit"
+          variant="contained"
+          sx={{
+            "&:hover": {
+              backgroundColor: "black",
+            },
+          }}
+        >
+          Submit Update
+        </Button>
       </form>
     </div>
   );

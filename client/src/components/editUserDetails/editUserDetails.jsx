@@ -143,7 +143,17 @@ export default function EditUserDetails({ username, email }) {
         />
 
         {/* Submission button */}
-        <button type="submit">Submit Update</button>
+        <Button
+          type="submit"
+          variant="contained"
+          sx={{
+            "&:hover": {
+              backgroundColor: "black",
+            },
+          }}
+        >
+          Submit Update
+        </Button>
       </form>
       {errorMessage && (
         <div>
