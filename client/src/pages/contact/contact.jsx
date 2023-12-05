@@ -119,9 +119,12 @@ export default function Contact() {
         </div>
         <div className="contact-details">
           {/* All links open in a new tab */}
-          <a href="tel:+9999999999" className="contact-button" style={{ paddingRight: "10px" }}>
-            <i className="fas fa-phone"></i>{" "}
-            Phone
+          <a
+            href="tel:+9999999999"
+            className="contact-button"
+            style={{ paddingRight: "10px" }}
+          >
+            <i className="fas fa-phone"></i> Call here
           </a>
           <a
             href="https://brian-trang-portfolio.netlify.app"
@@ -130,12 +133,14 @@ export default function Contact() {
             target="_blank"
             rel="noreferrer"
           >
-            <i className="fas fa-globe"></i>{" "}
-            Website
+            <i className="fas fa-globe"></i> Website
           </a>
-          <a href="mailto:Brian.trang@hotmail.com" className="contact-button" style={{ paddingRight: "10px" }}>
-            <i className="fas fa-envelope"></i>{" "}
-            Email
+          <a
+            href="mailto:Brian.trang@hotmail.com"
+            className="contact-button"
+            style={{ paddingRight: "10px" }}
+          >
+            <i className="fas fa-envelope"></i> Email
           </a>
           <a
             href="https://github.com/MakeRedundant"
@@ -144,8 +149,7 @@ export default function Contact() {
             target="_blank"
             rel="noreferrer"
           >
-            <i className="fab fa-github"></i>{" "}
-            GitHub
+            <i className="fab fa-github"></i> GitHub Profile
           </a>
         </div>
       </div>
@@ -212,7 +216,11 @@ export default function Contact() {
                   onChange={handleInputChange}
                   placeholder="Message here"
                   required
-                  style={{ width: "100%", marginBottom: "2rem", fontSize: "1.5rem" }}
+                  style={{
+                    width: "100%",
+                    marginBottom: "2rem",
+                    fontSize: "1.5rem",
+                  }}
                   minRows={5}
                   maxRows={10}
                 />

@@ -44,8 +44,11 @@ export default function FooterBottom() {
         }}
       >
         <CssBaseline />
-        <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
-        </Container>
+        <Container
+          component="main"
+          sx={{ mt: 8, mb: 2 }}
+          maxWidth="sm"
+        ></Container>
         <Box
           component="footer"
           sx={{
@@ -63,13 +66,22 @@ export default function FooterBottom() {
               Made by Brian Trang, Jarrod Blanning and Kalid Nadere
             </Typography>
             <div className="social-icons">
-              <a href="https://github.com/MakeRedundant">
+              <a
+                href="https://github.com/MakeRedundant"
+                aria-label="GitHub profile"
+              >
                 <FontAwesomeIcon icon={faGithub} size="2x" className="icon" />
               </a>
-              <a href="https://www.linkedin.com/in/brian-t-webdeveloper/">
+              <a
+                href="https://www.linkedin.com/in/brian-t-webdeveloper/"
+                aria-label="LinkedIn profile"
+              >
                 <FontAwesomeIcon icon={faLinkedin} size="2x" className="icon" />
               </a>
-              <a href="https://twitter.com/fireship_dev">
+              <a
+                href="https://twitter.com/fireship_dev"
+                aria-label="Twitter profile"
+              >
                 <FontAwesomeIcon icon={faTwitter} size="2x" className="icon" />
               </a>
             </div>

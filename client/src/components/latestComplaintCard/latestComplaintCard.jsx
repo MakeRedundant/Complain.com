@@ -22,19 +22,19 @@ export default function LatestComplaintCard({ complaint, isAdmin }) {
         {/* display complaint details */}
         <Card sx={{ display: "flex", width: "100%", borderRadius: 8, boxShadow: 9}}>
           <CardContent sx={{ flex: 1 }}>
-            <Typography component="h2" variant="h5">
+            <Typography component="h2" variant="h4">
               {complaint.title}
             </Typography>
-            <Typography component="h2" variant="h5">
+            <Typography component="h3" variant="h5">
               {complaint.username}
             </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
+            <Typography component="h4" variant="subtitle1" color="text.secondary">
               {complaint.date}
             </Typography>
-            <Typography variant="subtitle1" paragraph>
+            <Typography component="h4" variant="subtitle1" paragraph>
               {complaint.description}
             </Typography>
-            <Typography variant="subtitle1" color="primary">
+            <Typography component="h4" variant="subtitle1" color="primary">
               Continue reading...
             </Typography>
           </CardContent>
