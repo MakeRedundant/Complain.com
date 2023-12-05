@@ -40,15 +40,19 @@ export default function LatestComplaintCard({ complaint, isAdmin }) {
           </CardContent>
           <CardMedia
             component="img"
-            sx={{ width: 160, display: { xs: "none", sm: "block" } }}
+            sx={{
+              width: 160,
+              height: 160,
+              display: { xs: "none", sm: "block" },
+              objectFit: "cover",
+            }}
             image={complaint.image || defaultImageLink}
             alt="text"
           />
         </Card>
       </CardActionArea>
-    {/* component for if user is admin */}
+      {/* component for if user is admin */}
       <AdminConditionalButton complaint={complaint} isAdmin={isAdmin} />
     </Grid>
-   
   );
 }
