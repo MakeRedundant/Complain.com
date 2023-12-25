@@ -25,7 +25,6 @@ const NavBar = () => {
           <i className="far fa-user"></i>
           Profile
         </Link>
-       
         {/* Link for "Contact" */}
         <Link to="/contact" className={currentPage === "/contact" ? "nav-link active" : "nav-link"}>
           <i className="far fa fa-phone"></i>
@@ -41,6 +40,12 @@ const NavBar = () => {
           <i className="far fa-heart"></i>
           Donate
         </Link>
+        {/* Link for "ComplainRed" */}
+        <Link to="/complainred" className={currentPage === "/complainred" ? "nav-link active" : "nav-link"}>
+          <i className="far fa-angry"></i>
+          Complain Red
+        </Link>
+
         {/* Link for "Signup/Signin" */}
         {/* Conditional rendering for "Sign-up/Sign-in" or "Logout" */}
         {isAuthenticated ? (

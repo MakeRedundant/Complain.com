@@ -14,8 +14,7 @@ import SignUp from "./pages/signup/signup.jsx";
 import SignIn from "./pages/signin/login.jsx";
 import SingleComplaint from "./pages/SingleComplaint/SingleComplaint.jsx";
 import CategoryPage from "./pages/categorypage/categorypage.jsx";
-
-
+import ComplaintRed from "./pages/complainred/complainred.jsx";
 
 
 //Define routes
@@ -45,6 +44,11 @@ const router = createBrowserRouter([
         path: "/Donate",
         element: <Donate />,
       },
+      {
+        path: "/ComplainRed",
+        element: <ComplaintRed />,
+      },
+
       {
         path: "/SignUp",
         element: <SignUp />,

@@ -11,6 +11,14 @@ Form {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
+#contact {
+  margin-top: 7%;
+}
+
+.contact-details {
+  margin-top: 20px;
+}
+
 .contact-button .fa-phone {
   margin-left: 5px;
 }
