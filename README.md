@@ -38,7 +38,27 @@ https://complain-com-a977d53e691f.herokuapp.com
 ![Testing Library React](https://img.shields.io/badge/Testing%20Library%20React-14.0.0-mediumpurple.svg)
 ![Vitest](https://img.shields.io/badge/Vitest-0.31.4-mediumblue.svg)
 
-   
+## 📓 Table of Contents
+- [Complain](#complain)
+  - [� Table of Contents](#-table-of-contents)
+  - [💡🏡 Lighthouse](#-lighthouse)
+  - [📄 Description](#-description)
+  - [🪛 Technologies used](#-technologies-used)
+  - [🖥️ Installation](#️-installation)
+  - [💬 Usage](#-usage)
+  - [🖼️ Screenshot](#️-screenshot)
+  - [📹 Video](#-video)
+  - [⚖️ License](#️-license)
+  - [🤝 Contributing](#-contributing)
+  - [🛠️ Tests](#️-tests)
+  - [❔ Questions](#-questions)
+
+
+## 💡🏡 Lighthouse
+This is the Lighthouse Google report showcasing Performance 🚀, Accessibility ♿️, Best practices ✅, and SEO 🔍.
+
+![Lighthouse](./assets/Lighthouse.png)
+ 
 ## 📄 Description
 Complain.com: Empowering Voices, Amplifying Concerns
 
@@ -73,59 +93,49 @@ Complain.com stands as a testament to the power of technology in amplifying indi
 Join Complain.com today and make your voice heard.
 
 ## 🪛 Technologies used
-<p><a href="https://nodejs.org/">Node.js</a></p>
-<p><a href="https://www.npmjs.com/">NPM</a></p>
-<p><a href="https://www.npmjs.com/package/express">Express.js</a></p>
-<p><a href="https://www.npmjs.com/package/dotenv">dotenv</a></p>
-<p><a href="https://heroku.com/">Heroku</a></p>
-<p><a href="https://www.apollographql.com/docs/react/">Apollo Client</a></p>
-<p><a href="https://www.apollographql.com/docs/apollo-server/">Apollo Server</a></p>
-<p><a href="https://www.apollographql.com/docs/react/api/react-upload-client/">Apollo Upload Client</a></p>
-<p><a href="https://www.npmjs.com/package/bcrypt">Bcrypt</a></p>
-<p><a href="https://www.npmjs.com/package/base-64">Base-64</a></p>
-<p><a href="https://getbootstrap.com/">Bootstrap</a></p>
-<p><a href="https://www.npmjs.com/package/concurrently">Concurrently</a></p>
-<p><a href="https://emotion.sh/docs/introduction">Emotion React</a></p>
-<p><a href="https://emotion.sh/docs/styled">Emotion Styled</a></p>
-<p><a href="https://www.emailjs.com/">EmailJS</a></p>
-<p><a href="https://www.emailjs.com/">EmailJS-Com</a></p>
-<p><a href="https://expressjs.com/">Express</a></p>
-<p><a href="https://fontawesome.com/">Font Awesome Free</a></p>
-<p><a href="https://graphql.org/">GraphQL</a></p>
-<p><a href="https://happy.dom/">Happy-DOM</a></p>
-<p><a href="https://www.npmjs.com/package/js-base64">JS Base-64</a></p>
-<p><a href="https://www.npmjs.com/package/jwt-decode">JWT Decode</a></p>
-<p><a href="https://www.npmjs.com/package/jsonwebtoken">Jsonwebtoken</a></p>
-<p><a href="https://www.mongodb.com/">MongoDB</a></p>
-<p><a href="https://mongoosejs.com/">Mongoose</a></p>
-<p><a href="https://reactjs.org/">React</a></p>
-<p><a href="https://react-bootstrap.github.io/">React Bootstrap</a></p>
-<p><a href="https://reactjs.org/docs/react-dom.html">React DOM</a></p>
-<p><a href="https://reactdatepicker.com/">React Datepicker</a></p>
-<p><a href="https://react-dropzone.js.org/">React Dropzone</a></p>
-<p><a href="https://react-icons.github.io/react-icons/">React FontAwesome</a></p>
-<p><a href="https://react-icons.github.io/react-icons/">React Icons</a></p>
-<p><a href="https://reactrouter.com/">React Router DOM</a></p>
-<p><a href="https://semantic-ui.com/">Semantic UI CSS</a></p>
-<p><a href="https://react.semantic-ui.com/">Semantic UI React</a></p>
-<p><a href="https://stripe.com/">Stripe</a></p>
-<p><a href="https://sweetalert2.github.io/">SweetAlert2</a></p>
-<p><a href="https://testing-library.com/docs/react-testing-library/intro/">Testing Library React</a></p>
-<p><a href="https://vitejs.dev/">Vitest</a></p>
- 
-## 📓 Table of Contents
-- [Complain](#complain)
-  - [📄 Description](#-description)
-  - [🪛 Technologies used](#-technologies-used)
-  - [📓 Table of Contents](#-table-of-contents)
-  - [🖥️ Installation](#️-installation)
-  - [💬 Usage](#-usage)
-  - [🖼️ Screenshot](#️-screenshot)
-  - [📹 Video](#-video)
-  - [⚖️ License](#️-license)
-  - [🤝 Contributing](#-contributing)
-  - [🛠️ Tests](#️-tests)
-  - [❔ Questions](#-questions)
+
+| Technology              | Description                           | Link                                               |
+|-------------------------|---------------------------------------|----------------------------------------------------|
+| Node.js                 | Server-side JavaScript runtime         | [Node.js](https://nodejs.org/)                      |
+| NPM                     | Node.js Package Manager               | [NPM](https://www.npmjs.com/)                      |
+| Express.js              | Web application framework for Node.js  | [Express.js](https://www.npmjs.com/package/express) |
+| dotenv                  | Environment variable loader            | [dotenv](https://www.npmjs.com/package/dotenv)      |
+| Heroku                  | Cloud platform for deployment          | [Heroku](https://heroku.com/)                      |
+| Apollo Client           | GraphQL client                        | [Apollo Client](https://www.apollographql.com/docs/react/) |
+| Apollo Server           | GraphQL server                        | [Apollo Server](https://www.apollographql.com/docs/apollo-server/) |
+| Apollo Upload Client    | GraphQL file uploads                  | [Apollo Upload Client](https://www.apollographql.com/docs/react/api/react-upload-client/) |
+| Bcrypt                  | Password hashing library               | [Bcrypt](https://www.npmjs.com/package/bcrypt)      |
+| Base-64                 | Encoding/decoding                     | [Base-64](https://www.npmjs.com/package/base-64)    |
+| Bootstrap               | Front-end framework                   | [Bootstrap](https://getbootstrap.com/)              |
+| Concurrently            | Command runner for concurrent tasks    | [Concurrently](https://www.npmjs.com/package/concurrently) |
+| Emotion React           | CSS-in-JS library                     | [Emotion React](https://emotion.sh/docs/introduction) |
+| Emotion Styled          | Styled component library              | [Emotion Styled](https://emotion.sh/docs/styled)     |
+| EmailJS                 | Email delivery service                | [EmailJS](https://www.emailjs.com/)                 |
+| EmailJS-Com             | Email service for developers          | [EmailJS-Com](https://www.emailjs.com/)             |
+| Express                 | Web application framework for Node.js  | [Express](https://expressjs.com/)                   |
+| Font Awesome Free       | Icon set and toolkit                  | [Font Awesome Free](https://fontawesome.com/)       |
+| GraphQL                 | Query language for APIs               | [GraphQL](https://graphql.org/)                     |
+| Happy-DOM               | HTML template engine                  | [Happy-DOM](https://happy.dom/)                     |
+| JS Base-64              | Encoding/decoding library             | [JS Base-64](https://www.npmjs.com/package/js-base64) |
+| JWT Decode              | JSON Web Token decoding               | [JWT Decode](https://www.npmjs.com/package/jwt-decode) |
+| Jsonwebtoken            | JSON Web Token library                | [Jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) |
+| MongoDB                 | NoSQL database                        | [MongoDB](https://www.mongodb.com/)                 |
+| Mongoose                | MongoDB object modeling for Node.js    | [Mongoose](https://mongoosejs.com/)                 |
+| React                   | JavaScript library for building UIs    | [React](https://reactjs.org/)                       |
+| React Bootstrap         | React components library              | [React Bootstrap](https://react-bootstrap.github.io/) |
+| React DOM               | React rendering for the DOM            | [React DOM](https://reactjs.org/docs/react-dom.html) |
+| React Datepicker        | Datepicker component for React         | [React Datepicker](https://reactdatepicker.com/)    |
+| React Dropzone          | File dropzone for React                | [React Dropzone](https://react-dropzone.js.org/)     |
+| React FontAwesome       | FontAwesome for React components       | [React FontAwesome](https://react-icons.github.io/react-icons/) |
+| React Icons             | SVG icon library for React             | [React Icons](https://react-icons.github.io/react-icons/) |
+| React Router DOM        | Declarative routing for React          | [React Router DOM](https://reactrouter.com/)        |
+| Semantic UI CSS         | Front-end framework                   | [Semantic UI CSS](https://semantic-ui.com/)          |
+| Semantic UI React       | React integration for Semantic UI      | [Semantic UI React](https://react.semantic-ui.com/)  |
+| Stripe                  | Online payment processing              | [Stripe](https://stripe.com/)                       |
+| SweetAlert2             | Alert library for JavaScript           | [SweetAlert2](https://sweetalert2.github.io/)       |
+| Testing Library React   | Testing utilities for React            | [Testing Library React](https://testing-library.com/docs/react-testing-library/intro/) |
+| Vitest                  | Testing framework for Vite              | [Vitest](https://vitejs.dev/)                       |
+
    
 ## 🖥️ Installation
 
