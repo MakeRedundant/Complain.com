@@ -40,7 +40,7 @@ https://complain-com-a977d53e691f.herokuapp.com
 
 ## 📓 Table of Contents
 - [Complain](#complain)
-  - [� Table of Contents](#-table-of-contents)
+  - [📓 Table of Contents](#-table-of-contents)
   - [💡🏡 Lighthouse](#-lighthouse)
   - [📄 Description](#-description)
   - [🪛 Technologies used](#-technologies-used)
@@ -177,8 +177,14 @@ Contact
 Emailjs will send emails to Brian.trang9@gmail.com
 ![Contact](./assets/Contact.png)
 
+Terms and Conditions
+![T&Cs](./assets/T&Cs.png)
+
 Donate
 ![Donate](./assets/Donate.png)
+
+Complain Red
+![Red](./assets/Complain%20Red.png)
 
 ## 📹 Video
 Complain gif
