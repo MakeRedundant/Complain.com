@@ -12,6 +12,10 @@
   z-index: 1000 !important;
 }
 
+.navbar {
+  margin-bottom: 20%;
+}
+
 /* Common styling for navigation links and buttons */
 .nav-link {
   text-decoration: none !important;
@@ -44,11 +48,11 @@
 
 /* Hamburger Menu Styles for Small Screens */
 .mobile-menu-button {
-  display: none; /* Initially hidden on larger screens */
+  display: none;
 }
 
 .mobile-menu {
-  display: none; /* Initially hidden on larger screens */
+  display: none;
 }
 
 /* Styles for categories */
@@ -68,7 +72,7 @@
 }
 
 .section-to-adjust {
-  padding-top: 50px; /* Adjust this value to match the height of your navbar */
+  padding-top: 50px;
 }
 
 
@@ -102,5 +106,12 @@
   
   .categories a {
     padding: 5px 10px;
+  }
+}
+
+/* Mobile optimization */
+@media screen and (max-width: 364px) {
+  .navbar {
+    padding-bottom: 40% !important;
   }
 }
