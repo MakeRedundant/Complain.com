@@ -44,7 +44,7 @@ function DisplayTopVoted() {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundImage:
-            "url('https://i5.walmartimages.com/asr/9b971d54-7995-4a47-aa7a-adb2d7630c6c.f21033ccb62a1d89e93c2402428e6085.jpeg')",
+            "url('https://i.ibb.co/LnH5Xcf/background.jpg')", //used https://imgbb.com/ to host background image
         }}
       >
         {/* Render the complaint with the highest votes */}
