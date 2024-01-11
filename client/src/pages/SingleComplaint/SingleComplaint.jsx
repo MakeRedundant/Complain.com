@@ -46,7 +46,8 @@ const style = {
   pb: 3,
 };
 
-function SingleComplaint() {
+export default function SingleComplaint({ complaint }) {
+  const defaultImageLink = "https://source.unsplash.com/random?wallpapers";
   //mutation to delete complaint
   const [deleteComplaint, { error: err }] = useMutation(DELETE_COMPLAINT);
   //modal
@@ -175,12 +176,15 @@ function SingleComplaint() {
               {singleComplaint.createdAt}
             </Typography>
           </CardContent>
-          <CardMedia
-            component="img"
-            sx={{ width: 160, display: { xs: "none", sm: "block" } }}
-            image="https://i5.walmartimages.com/asr/9b971d54-7995-4a47-aa7a-adb2d7630c6c.f21033ccb62a1d89e93c2402428e6085.jpeg"
-            alt="text"
-          />
+          {singleComplaint && (
+            <CardMedia
+              component="img"
+              sx={{ width: 160, display: { xs: "none", sm: "block" } }}
+              image={singleComplaint.image || defaultImageLink}
+              alt="text"
+              loading="lazy"
+            />
+          )}
         </Card>
         {/* if current user is the same as the user of the complpaint, edit button for complpaint is displayed */}
         {currentUser === userComplaint.username ? (
@@ -333,5 +337,3 @@ function SingleComplaint() {
     </Grid>
   );
 }
-
-export default SingleComplaint;
