@@ -12,7 +12,7 @@ import DisplayTopVoted from "../../components/DisplayTopVoted";
 // import Auth
 import Auth from "../../utils/auth";
 import Header from "../../components/header/header";
-import Sidebar from "../../components/sidebars/sidebar";
+// import Sidebar from "../../components/sidebars/sidebar";
 import { useEffect } from "react";
 const theme = createTheme();
 // sections to be displayed with React router links
@@ -27,23 +27,23 @@ const sections = [
   { title: "Random", url: "/category/Random" },
 ];
 // display for sidebar
-const sidebar = {
-  title: "About",
-  description: "Complaining is a way of life",
-  archives: [
-    { title: "March 2020", url: "#" },
-    { title: "February 2020", url: "#" },
-    { title: "January 2020", url: "#" },
-    { title: "November 1999", url: "#" },
-    { title: "October 1999", url: "#" },
-    { title: "September 1999", url: "#" },
-    { title: "August 1999", url: "#" },
-    { title: "July 1999", url: "#" },
-    { title: "June 1999", url: "#" },
-    { title: "May 1999", url: "#" },
-    { title: "April 1999", url: "#" },
-  ],
-};
+// const sidebar = {
+//   title: "About",
+//   description: "Complaining is a way of life",
+//   archives: [
+//     { title: "March 2020", url: "#" },
+//     { title: "February 2020", url: "#" },
+//     { title: "January 2020", url: "#" },
+//     { title: "November 1999", url: "#" },
+//     { title: "October 1999", url: "#" },
+//     { title: "September 1999", url: "#" },
+//     { title: "August 1999", url: "#" },
+//     { title: "July 1999", url: "#" },
+//     { title: "June 1999", url: "#" },
+//     { title: "May 1999", url: "#" },
+//     { title: "April 1999", url: "#" },
+//   ],
+// };
 
 export default function Homepage() {
   // state for admin user
