@@ -63,7 +63,7 @@ export default function FooterBottom() {
         >
           <Container maxWidth="sm">
             <Typography variant="body1">
-              Made by Brian Trang, Jarrod Blanning and Kalid Nadere
+              Made by Brian Trang
             </Typography>
             <div className="social-icons">
               <a
