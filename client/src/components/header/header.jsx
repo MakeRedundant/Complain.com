@@ -47,7 +47,7 @@ function Header(props) {
           sx={{ flex: 1 }}
           className="header-title"
         >
-          💢 COMPLAIN 😡
+          💢 COMPLAIN
         </Typography>
 
         {userIsLoggedIn && ( // Display the "Make a Complaint" button only if the user is logged in
