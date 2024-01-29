@@ -1,0 +1,110 @@
+Presentation Notes
+
+Backend/Server
+
+Config folder in a MERN app 
+cleanDB.js is responsible for cleaning or dropping a collection in your MongoDB database,
+(clean state for seeding data into your MongoDB database.)
+
+importing dependencies models, db from the connection file to interact with the database
+
+Exports async function that checks if a collections exists and if not creates one, if one exists deletes drops it
+ensuring no duplicates 
+
+connection.js is responsible for  the connection to your MongoDB database using Mongoose. 
+Uses mongoose.connect() to establish a connection to the MongoDB
+
+seeds.js is initial data to populate the db
+
+Models folder using ORM mongoose
+
+contains the structure of the data models
+
+Schemas folder contains files that define scheme and resolvers
+In summary, typeDefs define the structure and operations of your GraphQL API, while resolvers implement the logic for those operations, fetching or manipulating the actual data
+
+Queries in the client defines react componenets requesting data from graphQL (GET_ME, mutations are used to modify data on the server CRUD complaints, reducers handle state changes 
+
+Config folder cleanDB handles cleaning the DB, connection js for using mongoose, seeds to populate, Models defines mongoose models, 
+
+REsolvers.js contains logic to implement graphql queries like the complaintsByCategory: async (parent, { category }) => {
+which returns complaints by category
+typedefs defines the structure
+
+SO client side we have graphql queries and mutations to fetch and modify data whilst on the server side we have models , seed data, resolvers, and typedefs
+
+Server.js is responsible for setting express, express.static to serve images, initialize apollo server by typedefs and resolvers, middleware setup to prase incoming rquest bodies, start Apollo server by calling server.start() and listening on the port In production (NODE_ENV === "production"), serves the static client build, uses db.once("open", () => {...}) to ensure the server starts listening only when the database connection is established.
+
+Image upload feature
+Base64 to convert a image into a base64 characters, store images as text in the db 
+
+FrontEnd/Client
+
+App.jsx represents the root component of the react app, main structure of the app is defined and componenets are rendered, import necessary modules from @apollo/client, React Router: Import Outlet from react-router-dom, which is used to render nested routes within your application. import setContext from @apollo/client/link/context, used to add authentication headers to requests.
+
+In summary, mutations modify data on the server, queries fetch data, and reducers handle state changes in the frontend, but they're not inherently related to GraphQL operations themselves. Reducers are more about managing frontend state, 
+
+Profile.jsx
+
+Here we define a state var called open to track whether the update profile is open or closed, initial false
+we have two functions handleopen and close which define the change of state
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+Usequery for detching the data
+
+  //UseQuery
+  const { loading, data } = useQuery(GET_ME);
+
+
+Extracts the user's data from the data object (presumably fetched using useQuery) and stores it in the userData variable.
+
+The ?. operator is optional chaining, ensuring that the code doesn't throw an error if data is null or undefined.
+If data.me is missing, it assigns an empty object {} to userData as a fallback.
+
+const complaints = userData.complaints || [];:
+Accesses the complaints array from the userData and stores it in the complaints variable.
+If userData.complaints is missing (e.g., the user has no complaints), it assigns an empty array [] to complaints.
+
+Uses a auth library to check if user is logged in and with a ternary operator which if true renders the user.id , update and delete profile button modules and the user posted complaints. if falsy than render you need to log/sign in
+
+Challenges: using the GET_USER didnt work  as defined, won't directly fetch the currently logged-in user's information
+
+GET_ME  directly fetches the current user's data without requiring manual ID management,
+
+Homepage.jsx 
+
+On the homepage we have the isAdmin state variable to check if the user is a admin and if so it renders the admin delete option for all the complaints.
+
+Useeffect which runs once to check the user admin state,
+LatestComplaints renders all the complaints. Use usequery to fetch complaints from the defined query get_complaints. The complaintData.map method iterates over each complaint object
+
+Topvoted component uses a for loop that renders the top voted posts by vote
+We declared a maxvotesComplaint as null because we dont have a value yet. We ran a for loop through the complaints if a complaint with a higher vote is found it becomes the maxvoteComplaint
+
+
+Questions for interviewers
+How would you guys go about the process of learning a new technology right now my priority is typescript and VUE 
+but do you think it's better to read more documentation or build more projects?
+
+Are there any other technologies you think are relvant i've seen alot of hype in web development space about Rust, NExt.js?
+
+How do you deal with imposter syndrome?
+
+There are a ton of resources for CMS like wordpress, WIX which reduces the barrier to entry for website creation, should i 
+try and learn these technologies?
+
+Coming from a non-technical background Health/Medicine to IT what are tips you may have for transitioning over?
+
+Are there other soft skills you think i should priotise working on myself?
+
+
+https://makeredundant.github.io/Brian-Website-old/
+old site
+
