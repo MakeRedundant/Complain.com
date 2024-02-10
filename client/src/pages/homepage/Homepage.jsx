@@ -74,14 +74,6 @@ export default function Homepage() {
           spacing={10}
           sx={{ mt: 10, height: "100vh" }}
         >
-          {/* <Grid item xs={12} md={6}>
-            <Sidebar
-              title={sidebar.title}
-              description={sidebar.description}
-              archives={sidebar.archives}
-              social={sidebar.social}
-            />
-          </Grid> */}
         </Grid>
       </Container>
     </ThemeProvider>

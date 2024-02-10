@@ -1,0 +1,19 @@
+.scrollButton {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    height: 6rem;
+    width: 6rem;
+  
+    position: fixed;
+    right: 4rem;
+    bottom: 4rem;
+    z-index: 1;
+  
+    font-size: 3rem;
+    color: blue;
+  
+    &__icon {
+      font-size: 8rem;
+    }
+  }

@@ -7,6 +7,7 @@ import {
 import "./App.css";
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
+import ScrollButton from "./components/UI/ScrollButton";
 import { Outlet } from "react-router-dom";
 
 import { setContext } from "@apollo/client/link/context";
@@ -34,6 +35,7 @@ const App = () => {
   return (
     <ApolloProvider client={client}>
       <Navbar />
+      <ScrollButton />
       <Outlet />
       <Footer />
     </ApolloProvider>
