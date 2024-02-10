@@ -40,7 +40,6 @@ export default function FooterBottom() {
         sx={{
           display: "flex",
           flexDirection: "column",
-          minHeight: "100vh",
         }}
       >
         <CssBaseline />
